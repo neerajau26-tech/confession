@@ -86,6 +86,23 @@
   animation: rainbow 5s linear infinite;
 }
 
+@keyframes rainbow-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+.animate-rainbow {
+  animation: rainbow-float 8s ease-in-out infinite;
+}
+
+.rainbow-gradient {
+  background: linear-gradient(to bottom, 
+    #ff0000 0%, #ff8800 16.6%, #ffff00 33.3%, 
+    #00ff00 50%, #0000ff 66.6%, #4b0082 83.3%, #9400d3 100%
+  );
+  mask-image: radial-gradient(circle at 50% 100%, transparent 40%, black 41%);
+}
+
 .kawaii-shadow {
   filter: drop-shadow(0 0 8px rgba(238, 43, 108, 0.3));
 }

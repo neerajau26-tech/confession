@@ -219,6 +219,11 @@ const LandingView = ({ onStart, onBrowse }: { onStart: () => void; onBrowse: () 
           transition={{ delay: 0.3, duration: 1 }}
           className="relative w-full max-w-[540px] mb-14"
         >
+          {/* Rainbow Background */}
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-32 opacity-20 blur-sm animate-rainbow">
+            <div className="w-full h-full rainbow-gradient rounded-t-full" />
+          </div>
+
           {/* Soft Glow Background */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/30 blur-[100px] rounded-full" />
           
@@ -251,11 +256,11 @@ const LandingView = ({ onStart, onBrowse }: { onStart: () => void; onBrowse: () 
             </div>
           </div>
           
-          {/* Floating Romantic Doodles */}
-          <div className="absolute -top-10 -right-10 text-6xl animate-bounce delay-100">💖</div>
-          <div className="absolute -bottom-10 -left-10 text-6xl animate-pulse">✨</div>
-          <div className="absolute top-1/2 -right-16 text-5xl animate-sparkle">🌸</div>
-          <div className="absolute top-1/4 -left-16 text-5xl animate-float-slow">🎀</div>
+          {/* Floating Romantic Doodles - Adjusted positions to prevent overlapping */}
+          <div className="absolute -top-16 -right-16 text-6xl animate-bounce delay-100 select-none">💖</div>
+          <div className="absolute -bottom-16 -left-16 text-6xl animate-pulse select-none">✨</div>
+          <div className="absolute top-1/2 -right-24 text-5xl animate-sparkle select-none">🌸</div>
+          <div className="absolute top-1/4 -left-24 text-5xl animate-float-slow select-none">🎀</div>
           
           {/* Tiny Secret Hearts */}
           {[...Array(6)].map((_, i) => (
